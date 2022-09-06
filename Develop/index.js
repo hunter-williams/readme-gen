@@ -60,8 +60,8 @@ function writeToFile(fileName, data) {
 
     // send answers(data) to generate markdown to format as readme.md
     fs.writeFile(fileName, generateMarkdown(data), (error, data) => {
-        console.log("WriteToFile() error",  error);
-        console.log("WriteToFile() data",  data);
+        // console.log("WriteToFile() error",  error);
+        // console.log("WriteToFile() data",  data);
     })
 }
 
