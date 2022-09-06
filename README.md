@@ -2,6 +2,7 @@
 [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
 ![Process](./Develop/assets/readmegen.png)
+[Generated Readme](./Develop/genREADME.md)
 
 ## Description
 - Command-Line readme generator
