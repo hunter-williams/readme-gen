@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require('fs');
-const { default: Choices } = require('inquirer/lib/objects/choices');
+const generateMarkdown = require('./utils/generateMarkdown')
 // import helper functions from file generateMarkdown
 
 
@@ -31,7 +31,7 @@ const questions = [
         name:  'license',
         type: 'checkbox',
         message: 'What license is the project covered under',
-        choices: ['mit','ISC']
+        choices: ['MIT','ISC','N/A']
     },
     {
         name:  'contribution',
@@ -69,7 +69,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)              // user answers all the questions
     .then((answers) => {                 // then handle answers
-        writeToFile("README.md", answers)   // answers get sent to generatemarkdown ^^^ and formateed into a readme
+        writeToFile("genREADME.md", answers)   // answers get sent to generatemarkdown ^^^ and formateed into a readme
     })
 }
 
